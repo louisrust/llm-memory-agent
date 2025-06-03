@@ -1,0 +1,5 @@
+.DS_STORE
+.env
+data/
+debug/prompt-last.txt
+node_modules/
