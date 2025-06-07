@@ -1,4 +1,5 @@
-import "dotenv/config"
+// Script for generating memories about a user based on ChatGPT conversations.
+
 import { loadConversations } from "./src/conversations.js"
 import { loadMemories } from "./src/memories.js"
 import { processConversations } from "./src/memoryBuilder.js"

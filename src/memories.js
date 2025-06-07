@@ -57,13 +57,26 @@ export function loadMemories() {
     return memories
 }
 
-// converts memory object to text format for LLM
+// converts memory object to text format for agent LLM
 export function formatMemories(memories) {
     let stringOut = ""
 
     memories.forEach(memoryObject => {
         let {id, weight, decayRate, stepsAgo, content} = memoryObject
         let memoryString = `[ID: ${id}] [W: ${weight}] [De: ${decayRate}] [St: ${stepsAgo}] ${content}`
+        stringOut += memoryString + "\n"
+    })
+
+    return stringOut
+}
+
+// converts memory object to text format for larger LLM
+export function formatMemoriesSimple(memories) {
+    let stringOut = ""
+    
+    memories.forEach(memoryObject => {
+        let {id, weight, decayRate, stepsAgo, content} = memoryObject
+        let memoryString = `[Weight: ${weight}] ${content}`
         stringOut += memoryString + "\n"
     })
 

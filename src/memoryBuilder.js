@@ -1,21 +1,21 @@
 // functions for building memories from ChatGPT conversations
-// @ts-check
+
 import fs from "fs"
 import { formatMemories, addMemory, bumpMemory, updateMemory, deleteMemory, stepMemories, decayMemories, flushMemories } from "./memories.js"
 import { runQuery } from "./llm.js"
 import { promiseDelay } from "./functions.js"
 import { formatConversation } from "./conversations.js"
 
-const promptStart = fs.readFileSync("./prompt.txt").toString()
+const promptStart = fs.readFileSync("./prompts/prompt-memoryBuild.txt").toString()
 function buildPrompt(memories, userPrompt) {
     let str = promptStart
 
     // add tailing whitespace if needed
     if (promptStart[promptStart.length-1].charCodeAt() != 10) { str += "\n" }
 
-    str += "\n==== BEGIN MEMORIES\n"
+    str += "\n==== BEGIN USER MEMORIES\n"
     str += formatMemories(memories)
-    str += "==== END MEMORIES\n\n"
+    str += "==== END USER MEMORIES\n\n"
 
     str += "==== BEGIN USER CONVERSATION"
     str += userPrompt

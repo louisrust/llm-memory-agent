@@ -1,16 +1,8 @@
 // functions for running queries through LLMs.
 
 import http from "http"
-
-// return true if JSON can be parsed, false otherwise.
-function isJSONValid(string) {
-    try {
-        JSON.parse(string)
-        return true
-    } catch (e) {
-        return false
-    }
-}
+import "dotenv/config"
+import { isJSONValid } from "./functions.js"
 
 // run query through ollama
 function runQueryLocal(query) {
