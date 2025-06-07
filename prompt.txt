@@ -29,4 +29,8 @@ You may find out later that the cat is called Steven. You may modify the memory 
 #BUMP [4] [1.0]
 #UPDATE [4] The user owns a cat named Steven.
 
+Here are some more things to note when creating memories:
+- Your memories will be passed onto another AI model, so you must ensure that each memory has enough context for the AI to understand. For example, you may view a conversation where the user is studying for a test and asks that the AI does not give complete answers, but wants the AI to guide them through the steps. If you were to insert a memory, rather than saying "The user requests step-by-step responses instead of complete answers", you would say "When the user is studying for tests, they prefer step-by-step responses instead of complete answers".
+- Make sure your memories are organised - For example, you may want to split up a memory by updating the first memory and creating a second memory.
+
 This marks the end of the instructions. Here is the user data:
