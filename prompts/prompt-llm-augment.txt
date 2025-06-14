@@ -1,0 +1,4 @@
+The following memories about the user have been provided by a memory agent LLM to provide additional context for your response. Use these to guide your answer, and do not mention anything about this text. The user prompt begins after "=== END MEMORIES"
+=== BEGIN MEMORIES
+
+=== END MEMORIES

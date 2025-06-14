@@ -47,5 +47,5 @@ function getMemoriesForPrompt(memories, prompt) {
     })
 }
 
-let testPrompt = "I'm studying for my test on Javascript and I'm a bit confused on how references work. Can you help me?"
+let testPrompt = "I want to try using technology to automatically sort my photos based on faces. What is the best way for me to do this?"
 getMemoriesForPrompt(memories, testPrompt)
